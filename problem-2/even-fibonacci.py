@@ -5,4 +5,5 @@ def even_fibonacci_sum():
             yield a
         a, b = b, a + b
 
+
 print(sum(even_fibonacci_sum()))
