@@ -8,12 +8,14 @@ public class largestPalindromeProduct {
         int c = 0;
         ArrayList<Integer> palindromes = new ArrayList<Integer>();
         while (a < 999) {
-            c = a + b;
+            c = a * b;
             if (String.valueOf(c) == String.valueOf(reverseNumber(c))) {
                 palindromes.add(c);
             }
+            a++;
+            b = a;
         }
-        System.out.println(Collections.max(palindromes));
+        System.out.println(Collections.max(palindromes,null));
     }
     public static int reverseNumber(int i) {
         int rev = 0;
