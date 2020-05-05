@@ -22,12 +22,12 @@ public class largestPalindromeProduct {
 
     static boolean reverseNumber(int num) {
         int orig = num;
-	    int sum=0,r;
-	    while(num!=0)
-	    {
-	    r=num%10;
-	    sum=(sum*10)+r;
-	    num/=10;	
+        int sum=0,r;
+        
+	    while(num!=0) {
+	        r=num%10;
+	        sum=(sum*10)+r;
+	        num/=10;	
         }
         if (orig == sum) {
             return true;
