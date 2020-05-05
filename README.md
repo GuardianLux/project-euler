@@ -7,3 +7,4 @@ Here I'll be completing many project euler challenges in a variety of languages
 3. Problem 3 - Largest prime factor of a given number, written in python
 4. Problem 4 - Largest palindrome product of two 3 digit numbers, written in java
 5. Problem 5 - Lowest common multiple of 1~20, written in python
+6. Problem 6 - Sum square difference of first 100 natural numbers, written in python
