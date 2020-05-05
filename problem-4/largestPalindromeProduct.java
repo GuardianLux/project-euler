@@ -1,29 +1,39 @@
-import java.util.ArrayList;
-import java.util.Collections;
-
 public class largestPalindromeProduct {
     public static void main(String[] args) {
-        int a = 0;
-        int b = 0;
-        int c = 0;
-        ArrayList<Integer> palindromes = new ArrayList<Integer>();
-        while (a < 999) {
-            c = a * b;
-            if (String.valueOf(c) == String.valueOf(reverseNumber(c))) {
-                palindromes.add(c);
+        int a = 999;
+        int b = 999;
+        long biggest = 0;
+
+        for (int bb = b; bb > 0; bb--)
+        {
+            for (int aa = a; aa > 0; aa--)
+            {
+                if (reverseNumber(aa*bb))
+                {
+                    if ( aa*bb > biggest )
+                    {
+                        biggest = aa*bb;
+                    }
+                }
             }
-            a++;
-            b = a;
         }
-        System.out.println(Collections.max(palindromes,null));
-    }
-    public static int reverseNumber(int i) {
-        int rev = 0;
-        while(i != 0) {
-            int digit = i % 10;
-            rev = rev * 10 + digit;
-            i /= 10;
-         }
-        return rev;
-    }
+    System.out.println(biggest);
+}
+
+    static boolean reverseNumber(int num) {
+        int orig = num;
+	    int sum=0,r;
+	    while(num!=0)
+	    {
+	    r=num%10;
+	    sum=(sum*10)+r;
+	    num/=10;	
+        }
+        if (orig == sum) {
+            return true;
+        }
+        else {
+            return false;
+        }
+	}
 }
