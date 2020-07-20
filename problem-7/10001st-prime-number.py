@@ -1,10 +1,14 @@
-i = 1
-prime = 0
-counter = 0
+def nth_prime(n):
+    counter = 2
+    for i in range(3, n**2, 2):
+        k = 1
+        while k*k < i:
+            k += 2
+            if i % k == 0:
+               break
+        else:
+            counter += 1
+        if counter == n:
+            return i
 
-for i in range(2, prime):
-    if (i % prime) == 0:
-        counter += 1
-    if counter == 10001:
-        prime = i
-print(prime)
+print(nth_prime(10001))
