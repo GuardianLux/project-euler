@@ -10,3 +10,4 @@ Here I'll be completing many project euler challenges in a variety of languages 
 6. Problem 6 - Sum square difference of first 100 natural numbers, written in python
 7. Problem 7 - 10001st prime, implemented in python
 8. Problem 8 - Largest product in a series, implemented in python
+9. Problem 9 - Special Pythagorean Triplet, implemented in python
